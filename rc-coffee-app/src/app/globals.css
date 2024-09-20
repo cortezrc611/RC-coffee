@@ -60,7 +60,7 @@ nav ul {
 .coffee-slogan{
   color: #422712;
   gap: 5%;
-  margin-top: -15rem;
+  margin-top: -10rem;
 }
 .coffee-slogan img{
   width: 30vw;
@@ -92,12 +92,18 @@ nav {
   display: none;
 }
 /* tablet-specific styles */
+
 @media (max-width: 1279px) {
+  .beans{
+    margin-top: -10rem;
+  }
+  
   .coffee-slogan{
     margin-top: -10rem;
   }
 
 }
+
 /* Mobile-specific styles */
 @media (max-width: 900px) {
 
@@ -150,14 +156,8 @@ nav {
 
 
 }
-@media (max-width: 1279px) {
-  .coffee-slogan{
-    margin-top: -10rem;
-  }
 
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .background-image {
     background-image: none; /* Removes the background image on small screens */
   }

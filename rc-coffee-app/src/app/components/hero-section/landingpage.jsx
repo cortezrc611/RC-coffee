@@ -1,7 +1,7 @@
 export default function LandingPage() {
     return (
       <main>
-        <div className="beans relative w-full h-screen mt-20 overflow-hidden">
+        <div className="beans relative w-full h-screen overflow-hidden">
           <div className="background-image absolute inset-0 bg-cover bg-no-repeat bg-center z-0"></div>
           <div className="coffee-slogan flex items-center flex-row justify-center h-full z-10 text-white italic font-bold text-4xl text-center">
             <div className="slogan">
