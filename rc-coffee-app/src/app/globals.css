@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F6E7C7;
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.background-image {
+  background-image: url('./images/beans.png');
+  background-size: cover;
+  background-position: center;
+}
+.hamburger {
+  top: 2.5rem;
+  position: absolute;
+  right: 3rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #3D1C05;
+  transition: transform 0.3s, opacity 0.3s;
+  z-index: 1;
+}
+
+.hamburger.open .line1 {
+  transform: rotate(45deg) translateY(15px); /* Top line rotates down */
+}
+
+.hamburger.open .line2 {
+  opacity: 0; /* Middle line disappears */
+}
+
+.hamburger.open .line3 {
+  transform: rotate(-40deg) translateY(-19px); /* Bottom line rotates up */
+}
+
+/* Navigation menu styles */
+nav ul {
+  display: flex;
+}
+
+.burger-logo {
+  display: none;
+}
+.coffee-slogan{
+  color: #422712;
+  gap: 5%;
+  margin-top: -15rem;
+}
+.coffee-slogan img{
+  width: 30vw;
+}
+.slogan{
+  line-height: 3vw;
+  text-align: left;
+  margin-left: 10%;
+  font-weight: 900;
+}
+.slogan h3{
+  font-size: 2vw;
+  margin-left: 15px;
+}
+.slogan h1{
+  font-size: 3vw;
+}
+/* Custom class for text balance */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+nav {
+  color: #3D1C05;
+}
+.mobile-logo{
+  display: none;
+}
+/* tablet-specific styles */
+@media (max-width: 1279px) {
+  .coffee-slogan{
+    margin-top: -10rem;
+  }
+
+}
+/* Mobile-specific styles */
+@media (max-width: 900px) {
+
+  @keyframes slideInFromLeft {
+    100% {
+      transform: translateX(0);
+    }
+    0% {
+      transform: translateX(-100%);
+    }
+  }
+  .coffee-slogan{
+    margin-top: -13rem;
+  }
+
+  .slogan h1{
+    font-size: 25px;
+  }
+  .slogan h3{
+    font-size: 25px;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: beige;
+    align-items: center;
+    padding-top: 6rem;
+    transition: 0.3s;
+    transform: translateX(-100%);
+    display: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  nav ul.open {
+    display: flex;
+    animation: slideInFromLeft 0.3s forwards;
+  }
+.mobile-logo.open{
+  display: block;
+}
+  .hamburger {
+    display: flex;
+  }
+
+
+}
+@media (max-width: 1279px) {
+  .coffee-slogan{
+    margin-top: -10rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .background-image {
+    background-image: none; /* Removes the background image on small screens */
+  }
+.beans{
+  margin-top: -1px;
+  height: 700px;
+}
+.coffee-slogan img{
+width: 500px;
+margin-top: 10rem;
+
+}
+  .coffee-slogan{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .slogan{
+    line-height: 2rem;
+    text-align: center;
+    margin-left: 0;
+    font-weight: 900;
+  }
+}
