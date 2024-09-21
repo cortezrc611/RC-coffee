@@ -9,6 +9,7 @@ export default function LandingPage() {
               <h1>RELAX... TAKE A</h1>
               <h1>COFFEE BREAK</h1>
             </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="./images/hero-image.png" alt="Hero" className="mt-4" />
           </div>
         </div>
