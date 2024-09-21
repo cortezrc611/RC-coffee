@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Image from "next/image";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,7 +12,8 @@ export default function Navbar() {
   return (
     <nav className="justify-between flex flex-wrap items-center mx-10 mt-3">
       <div className="mobile-nav flex items-center gap-5 text-3xl font-extrabold italic">
-        <Image src="/images/rcoffee.png" alt="coffee-logo" width={80} height={80}/>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="./images/Rcoffee.png" alt="coffee-logo" className="w-20" />
         <a href="/">Cafe</a>
       </div>
       <div className='flex flex-wrap gap-4 font-bold' onClick={() => setIsOpen(!isOpen)}>
