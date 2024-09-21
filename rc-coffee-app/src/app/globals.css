@@ -12,11 +12,35 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .background-image {
   background-image: url('./images/beans.png');
   background-size: cover;
   background-position: center;
+  opacity: 0; /* Start with opacity 0 for fade-in effect */
+  animation: rotateBackground 1s ease-in-out forwards, fadeIn 2s ease-in-out forwards;
 }
+
+/* Keyframe animation for rotating background image clockwise */
+@keyframes rotateBackground {
+  from {
+    transform: rotate(280deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .hamburger {
   top: 2.5rem;
   position: absolute;
@@ -57,27 +81,35 @@ nav ul {
 .burger-logo {
   display: none;
 }
-.coffee-slogan{
+
+.coffee-slogan {
   color: #422712;
   gap: 5%;
   margin-top: -10rem;
+  opacity: 0; /* Start with opacity 0 for fade-in effect */
+  animation: fadeIn 2.5s ease-in-out forwards;
 }
-.coffee-slogan img{
+
+.coffee-slogan img {
   width: 30vw;
 }
-.slogan{
+
+.slogan {
   line-height: 3vw;
   text-align: left;
   margin-left: 10%;
   font-weight: 900;
 }
-.slogan h3{
+
+.slogan h3 {
   font-size: 2vw;
   margin-left: 15px;
 }
-.slogan h1{
+
+.slogan h1 {
   font-size: 3vw;
 }
+
 /* Custom class for text balance */
 @layer utilities {
   .text-balance {
@@ -88,20 +120,31 @@ nav ul {
 nav {
   color: #3D1C05;
 }
-.mobile-logo{
+
+.mobile-logo {
   display: none;
 }
-/* tablet-specific styles */
 
+.about-container img{
+  width: 45vw;
+  height: fit-content;
+}
+.about-text h1{
+  font-size: 5vw;
+}
+.about-text p{
+  font-size: 1.4vw;
+}
+
+/* tablet-specific styles */
 @media (max-width: 1279px) {
-  .beans{
-    margin-top: -10rem;
+  .beans {
+    margin-top: -5rem;
   }
   
-  .coffee-slogan{
+  .coffee-slogan {
     margin-top: -10rem;
   }
-
 }
 
 /* Mobile-specific styles */
@@ -115,16 +158,19 @@ nav {
       transform: translateX(-100%);
     }
   }
-  .coffee-slogan{
-    margin-top: -13rem;
+
+  .coffee-slogan {
+    margin-top: -9rem;
   }
 
-  .slogan h1{
+  .slogan h1 {
     font-size: 25px;
   }
-  .slogan h3{
+
+  .slogan h3 {
     font-size: 25px;
   }
+
   nav ul {
     flex-direction: column;
     width: 100%;
@@ -147,34 +193,61 @@ nav {
     display: flex;
     animation: slideInFromLeft 0.3s forwards;
   }
-.mobile-logo.open{
-  display: block;
-}
+
+  .mobile-logo.open {
+    display: block;
+  }
+
   .hamburger {
     display: flex;
   }
 
+  .about-container{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 5rem;
+  }
 
+  .about-container img{
+    width: 100%;
+  }
+.about-text{
+  margin-top: 20px;
+}
+  .about-text p{
+   padding-left: 2rem;
+   padding-right: 2rem;
+   font-size: 20px;
+   text-align: center;
+   margin-top: 20px;
+  }
 }
 
+/* Adjustments for medium screens */
 @media (max-width: 1024px) {
   .background-image {
     background-image: none; /* Removes the background image on small screens */
   }
-.beans{
-  margin-top: -1px;
-  height: 700px;
-}
-.coffee-slogan img{
-width: 500px;
-margin-top: 10rem;
 
-}
-  .coffee-slogan{
+  .beans {
+    margin-top: -1px;
+    height: 700px;
+  }
+
+  .coffee-slogan img {
+    width: 500px;
+    margin-top: 10rem;
+  }
+
+  .coffee-slogan {
     display: flex;
     flex-direction: column-reverse;
   }
-  .slogan{
+
+  .slogan {
     line-height: 2rem;
     text-align: center;
     margin-left: 0;
