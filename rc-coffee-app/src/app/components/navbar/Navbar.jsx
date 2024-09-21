@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <nav className="justify-between flex flex-wrap items-center mx-10 mt-3">
       <div className="mobile-nav flex items-center gap-5 text-3xl font-extrabold italic">
-        <Image src="/images/Rcoffee.png" alt="coffee-logo" width={80} height={80}/>
+        <Image src="/images/rcoffee.png" alt="coffee-logo" width={80} height={80}/>
         <a href="/">Cafe</a>
       </div>
       <div className='flex flex-wrap gap-4 font-bold' onClick={() => setIsOpen(!isOpen)}>
