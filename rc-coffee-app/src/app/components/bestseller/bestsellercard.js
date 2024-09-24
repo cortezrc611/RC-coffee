@@ -71,7 +71,10 @@ export default function BestSellerCard() {
               {item.image && <img src={item.image} alt={item.title} className="w-full h-auto" />}
               <h2 className="italic font-extrabold text-[#3D1C05]">{item.title}</h2><br />
               <div className="flex italic text-center justify-between font-extrabold text-[#3D1C05]">
+                <div className='rating flex flex-row gap-2 items-center align-middle'>
+              <img className='star' src='/images/star-512.png'/>
                 <p>{item.rating ? item.rating : 'No rating available'}</p>
+                </div>
                 <p>{item.price ? `$ ${item.price}` : 'Price not available'}</p>
               </div>
             </div>

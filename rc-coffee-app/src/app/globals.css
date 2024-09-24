@@ -35,7 +35,9 @@ margin: 0 10px;
     .fonting p {
       font-size: 0.75vw;
       }
-
+      .star{
+        width: 1.5vw;
+       } 
  .most-offered-text h1{
   font-size: 4vw;
  }   
@@ -172,9 +174,7 @@ nav {
   .coffee-slogan {
     margin-top: -10rem;
   }
-  .most-offered-text h2{
-    margin-bottom: 15px;
-   }  
+ 
    .most-offered-text p{
     font-size: 1.5vw;
    } 
@@ -281,7 +281,9 @@ nav {
   .background-image {
     background-image: none; /* Removes the background image on small screens */
   }
-
+  .star{
+    width: 4.5vw;
+   } 
   .beans {
     margin-top: -1px;
     height: 700px;
@@ -307,13 +309,13 @@ nav {
     margin-bottom: 15px;
    }  
    .fonting h1 {
-    font-size: 1.5vw;
+    font-size: 4vw;
     }
     .fonting h2{
-      font-size: 1.5vw;
+      font-size: 4vw;
       }
       .fonting p {
-        font-size: 1.5vw;
+        font-size: 4vw;
         }
       .most-offered-text{
        margin-top: 0px;
@@ -322,14 +324,21 @@ nav {
         }
 
         .most-offered-button{
-          margin-top: 0px;
+          margin-top: 10px;
         }
         .most-offered-text h1{
-          font-size: 6vw;
+          font-size: 7.5vw;
            }
+           .most-offered-text h2{
+            font-size: 7.5vw;
+             }
+             .most-offered-button a{
+              font-size: 5vw;
+               }
         .most-offered-text p{
           margin-left: 50px;
           margin-right: 50px;
+          font-size: 3vw;
         }
 
         .slick-slide > div {
@@ -340,5 +349,7 @@ nav {
             margin-left: 2rem;
             margin-right: 2rem;
           }
+
+
 
 }
