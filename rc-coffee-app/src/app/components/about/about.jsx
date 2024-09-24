@@ -18,7 +18,6 @@ export default function About() {
                 Read More...
               </a>
             </p>
-            <p>This Site is still in Development</p>
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="./images/aboutimage.jpg" alt="about" />
