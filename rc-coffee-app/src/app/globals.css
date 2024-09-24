@@ -269,7 +269,10 @@ nav {
    text-align: center;
    margin-top: 20px;
   }
-  
+  .slider{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
 }
 
@@ -312,7 +315,18 @@ nav {
       .fonting p {
         font-size: 1.5vw;
         }
+      .most-offered-text{
+       margin-top: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+        }
 
+        .most-offered-button{
+          margin-top: 0px;
+        }
+        .most-offered-text h1{
+          font-size: 6vw;
+           }
         .most-offered-text p{
           margin-left: 50px;
           margin-right: 50px;
@@ -326,4 +340,5 @@ nav {
             margin-left: 2rem;
             margin-right: 2rem;
           }
+
 }

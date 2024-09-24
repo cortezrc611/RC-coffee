@@ -64,7 +64,7 @@ export default function BestSellerCard() {
   return (
     <div className="relative overflow-hidden">
       {bestseller.length > 0 ? (
-        <Slider {...settings} className="flex p-6 px-12">
+        <Slider {...settings} className="slider flex p-6 px-12">
           {bestseller.map((item, index) => (
             <div className="fonting flex flex-col text-center w-36 px-6 py-2 !bg-[#F6E7C7] rounded-lg" key={index}>
               <h1 className="italic font-extrabold text-[#3D1C05]">BEST SELLERS!</h1>
